@@ -1,0 +1,4 @@
+---
+kubernetes_version: 1.11
+admission_token: abcdef.0123456789abcdef # format: [a-z0-9]{6}\.[a-z0-9]{16}
+master_ip: 10.10.10.11 # TODO: Get Master node IP dynamically
