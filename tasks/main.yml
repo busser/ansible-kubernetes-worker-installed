@@ -1,9 +1,9 @@
 ---
-# Not idempotent (fails on second run)
-# TODO: Make Ansible not run again
 - name: Join cluster as Worker
   command: >
     kubeadm join
     --token {{ admission_token }}
     {{ master_ip }}:6443
     --discovery-token-unsafe-skip-ca-verification
+  args:
+    creates: /etc/kubernetes/kubelet.conf
